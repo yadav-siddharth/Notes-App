@@ -1,9 +1,13 @@
-import { useState } from "react";
-import { BsFilePlusFill } from "react-icons/bs";
+import { useState,useEffect } from "react";
+import { BsFilePlusFill, BsTranslate } from "react-icons/bs";
+const axios = require('axios').default;
+
 
 function AddNote({handleAddNote}){
           const [noteText, setNoteText]= useState([]);
           const charLimit = 200;
+          const [options, setOptions] = useState([]);
+          const [to, setTo] = useState('en');
 
           const handleChange = (event)=>{
                     if(charLimit-event.target.value.length>=0){
@@ -19,6 +23,19 @@ function AddNote({handleAddNote}){
                     
           }
 
+          // useEffect(() => {
+          //           axios.get('https://libretranslate.de/languages', {
+          //               headers: { "accept": 'application/json' },
+          //             })
+          //             .then((res) => {
+          //               console.log(res.data);
+          //               setOptions(res.data);
+          //             });
+          // }, []);
+                
+
+
+
           return (
                     <div className="note new">
                               <textarea rows='8' cols='10'
@@ -28,6 +45,7 @@ function AddNote({handleAddNote}){
                               </textarea>
                               <div className="note-footer">
                                         <strong>{charLimit-noteText.length} Remaining</strong>
+                                        <BsTranslate size="1.9rem"/>
                                         <BsFilePlusFill onClick={handleSaveClick} size='2.5em'/>
                               </div>
 

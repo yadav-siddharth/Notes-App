@@ -1,23 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h4,p,a{
+  color:#0A2647;
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
 body {
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fdfdfd;
+  font-family:'Poppins',
+    sans-serif;
+  background-color: #fff;  
+
 }
 
-code {
-  font-family: Verdana, Geneva, Tahoma, sans-serif,
-    monospace;
+/* .btn{
+  padding: 12px,32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color:#FAD6A5;
+  color: #222;
+  border: 1px solid #fff;
+  font-weight: 600;
+  cursor:pointer;
 }
 
-.header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 0px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.btn-light{
+  background: transparent;
+  color: #fff;
 }
+
+.btn:hover{
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
+  transition: 0.3s;
+} */
 
 .dark-mode{
   background-color: rgb(28, 27, 33);
@@ -34,6 +60,7 @@ code {
   padding-right:15px;
   padding-left:15px;
   min-height: 100vh;
+  padding-top: 100px;
 
 }
 
@@ -50,13 +77,14 @@ strong{
  }
 
  .note.new{
-  background-color: #ABC270;
+  background-color: #FFF4D2;
  }
 
  textarea{
   border:none;
   resize: none;
-  background-color: #ABC270;
+  background-color: #fff4d2;
+  font-size: 1.8rem;
  }
 
  textarea:focus{
@@ -78,14 +106,16 @@ strong{
  }
 
 .note{
-  background-color: #FDA769;
+  background-color: #ECF2FF;
   border-radius: 10px;
   padding:1rem;
-  min-height:170px;
+  min-height:370px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   white-space: pre-wrap;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .note-footer{
@@ -93,22 +123,4 @@ strong{
   align-items: center;
   justify-content: space-between;
 
-}
-
-.search{
-  display:flex;
-  align-items: center;
-  background-color: rgb(233,233,233);
-  border-radius: 10px;
-  padding:0px;
-  margin-bottom: 1.5em;
-}
-
-.search input{
-  border:none;
-  background-color: rgb(233,233,233);
-}
-
-.search input:focus{
-  outline: none;
 }

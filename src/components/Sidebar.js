@@ -7,7 +7,7 @@ import './navbar.css';
 import {IconContext} from 'react-icons'
 
 function Sidebar(){
-          const [sidebar,setSidebar]= useState(true)
+          const [sidebar,setSidebar]= useState(false)
 
           const showSidebar = ()=>{
                     setSidebar(!sidebar)
@@ -18,7 +18,7 @@ function Sidebar(){
                        <IconContext.Provider value={{color:'#fff'}}>
                                         <div className="navbar">
                                                   <Link to="#" className='menu-bars'>
-                                                            <FaBars color="#1b1916" onClick={showSidebar}/>
+                                                            <FaBars onClick={showSidebar}/>
                                                   </Link>
 
                                         </div>
