@@ -93,7 +93,8 @@ const Translate = () => {
               spellcheck="false"
               className="from-text"
               placeholder="Enter text"
-            ></textarea>
+            >              
+          </textarea>
             <textarea
               spellcheck="false"
               readonly

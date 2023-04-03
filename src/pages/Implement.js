@@ -43,17 +43,25 @@ const deleteNote = (id) => {
 return (
           <div className={`${darkMode && 'dark-mode'}`}>
                     <Navbar/>
+                    
                     <div className='container'>
-                              <NotesList
-                                        notes={notes.filter((note) =>
-                                                  note.text.toLowerCase().includes(searchText)
-                                        )}
-                                        handleAddNote={addNote}
-                                        handleDeleteNote={deleteNote}
-                              />
-                              
-                              
+                              <div className='left'>
+                                        <NotesList
+                                                  notes={notes.filter((note) =>
+                                                            note.text.toLowerCase().includes(searchText)
+                                                  )}
+                                                  handleAddNote={addNote}
+                                                  handleDeleteNote={deleteNote}
+                                        />
+                              </div> 
+
+                              <div  className='right'>
+                              <Translate/>   
+                              </div>        
+                                       
+                                 
                     </div>
+                    
                     
           </div>
           )
